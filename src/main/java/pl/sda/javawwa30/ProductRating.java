@@ -14,6 +14,11 @@ public class ProductRating {
     }
 
     public void setScore(int score) {
-        this.score = score;
+        if(score >= 1 && score <= 5)
+            this.score = score;
+        else if(score < 1)
+            this.setScore(1);
+        else
+            this.setScore(5);
     }
 }
