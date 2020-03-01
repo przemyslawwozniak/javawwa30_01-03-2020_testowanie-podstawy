@@ -1,14 +1,22 @@
 package pl.sda.javawwa30;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class ProductRatingTest {
 
+    ProductRating pr;
+
+    @Before
+    public void setup() {
+        pr = new ProductRating();   //tworzy nowy product rating przed kazdym wywolaniem metody testowej
+    }
+
     @Test
     public void create() {
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
     }
 
     //notacja Python zamiast camel case: tryToSetScoreBelowRangeSetsMinInRange
@@ -16,7 +24,7 @@ public class ProductRatingTest {
     //public void try_to_set_score_below_range_sets_min_in_range() {
     public void score_below_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(0);
@@ -28,7 +36,7 @@ public class ProductRatingTest {
     @Test
     public void score_above_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(6);
@@ -40,7 +48,7 @@ public class ProductRatingTest {
     @Test
     public void score_in_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(3);
@@ -52,7 +60,7 @@ public class ProductRatingTest {
     @Test
     public void score_way_below_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(Integer.MIN_VALUE);
@@ -64,7 +72,7 @@ public class ProductRatingTest {
     @Test
     public void score_way_above_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(Integer.MAX_VALUE);
@@ -76,7 +84,7 @@ public class ProductRatingTest {
     @Test
     public void score_way_above_plus_1_range() {
         //given
-        ProductRating pr = new ProductRating();
+        //ProductRating pr = new ProductRating();
 
         //when
         pr.setScore(Integer.MAX_VALUE + 1);
